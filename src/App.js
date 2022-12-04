@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import MainTitle from "./components/MainTitle/MainTitle"
+import MainForm from "./components/MainForm/MainForm"
+
+// import logo from "./logo.svg"
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex justify-top items-center flex-col">
+      <MainTitle />
+      <MainForm />
+
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+
+//bg-gradient-to-r from-cyan-500 to-blue-500

@@ -1,0 +1,26 @@
+
+
+.main-form{
+    margin-top: 5rem !important;
+  }
+  .main-label{
+    font-size: 29px;
+    text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+  }
+  .main-input{
+    outline: none;
+    font-size: 29px;
+    color: white;
+    background: rgba(198, 198, 198, 0.81);
+  }
+  
+  .main-input::placeholder{
+    color: #4A4949;
+  }
+  
+  .main-button{
+    background-color: #8AEFF5;
+    font-size: 29px;
+    width: 120px;
+  }
