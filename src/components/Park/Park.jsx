@@ -1,12 +1,16 @@
-
+import './Park.css'
 
 const Park=(props)=>{
 
-    return <>
-    
-        <h1>{props.name}</h1>
-        <h2>{props.address}</h2>
-        <p>{props.description}</p>
-    </>
+    return (<li className="Park flex items-top justify-center ">
+   
+
+    <img className="park-image" src={props.image} alt="Nationa Park"/>
+    <div className="park-info-container">
+        <h1 className="park-title">{props.name}</h1>
+        <h2 className="park-address">{props.address}</h2>
+        <p className="park-description">{props.description}</p>
+        </div>
+    </li>)
 }
 export default Park

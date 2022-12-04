@@ -1,5 +1,6 @@
 import MainTitle from "./components/MainTitle/MainTitle"
 import MainForm from "./components/MainForm/MainForm"
+import MainPage from './components/MainPage/MainPage'
 
 // import logo from "./logo.svg"
 import "./App.css"
@@ -7,8 +8,9 @@ import "./App.css"
 function App() {
   return (
     <div className="App flex justify-top items-center flex-col">
-      <MainTitle />
-      <MainForm />
+      {/* <MainTitle />
+      <MainForm /> */}
+      <MainPage />
 
       
     </div>

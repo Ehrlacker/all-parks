@@ -3,6 +3,12 @@
 .main-form{
     margin-top: 5rem !important;
   }
+  
+  .form-input-and-button-container{
+margin-top: 2rem;
+  }
+
+
   .main-label{
     font-size: 29px;
     text-align: center;
@@ -23,4 +29,9 @@
     background-color: #8AEFF5;
     font-size: 29px;
     width: 120px;
+  }
+
+  .parks-list{
+    max-width: 100%;
+    margin: 10rem;
   }

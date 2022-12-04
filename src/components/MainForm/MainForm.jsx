@@ -22,39 +22,44 @@ const MainForm = () => {
       })
     })
     e.preventDefault()
+    setMainInputValue("")
+    setStateCode([])
   }
 
   return (
     <>
-      <form className="main-form">
-        <label className="main-label mr-5 text-white">Next adventure:</label>
+      <form className="main-form flex flex-col justify-center items-center">
+        <label className="main-label mr-5 text-white">
+          Your Next Adventure
+        </label>
 
-        <input
-          onChange={handleMainInputChange}
-          className="main-input rounded-full text-center"
-          placeholder="Enter State Letters"
-          value={mainInputValue}
-        />
+        <div className="form-input-and-button-container mt-10">
+          <input
+            onChange={handleMainInputChange}
+            className="main-input rounded-full text-center"
+            placeholder="Enter State Letters"
+            value={mainInputValue}
+          />
 
-        <button className="main-button rounded-full ml-5" onClick={getPark}>
-          Search
-        </button>
+          <button className="main-button rounded-full ml-5" onClick={getPark}>
+            Search
+          </button>
+        </div>
       </form>
 
-      <ul>
+      <ul className="parks-list flex flex-wrap justify-around">
         {Object.values(stateCode).map((x) => {
           return x.data.map((park) => {
-            return <li>
+            return (
               <Park
-              key={park.id}
-              name={park.fullName}
-              
-               />
-            </li>
+                key={park.id}
+                image={park.images[0].url}
+                name={park.fullName}
+                description={park.description}
+              />
+            )
           })
         })}
-
-        
       </ul>
     </>
   )
