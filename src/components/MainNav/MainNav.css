@@ -1,0 +1,12 @@
+
+.MainNav{
+    max-width: 25rem;
+   
+}
+
+.main-nav-item{
+    max-width: 10rem;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 1.25rem;
+    margin: 1rem;
+}

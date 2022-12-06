@@ -1,7 +1,8 @@
 
 
 .main-form{
-    margin-top: 5rem !important;
+ 
+    width: 100%;
   }
   
   .form-input-and-button-container{
@@ -31,7 +32,6 @@ margin-top: 2rem;
     width: 120px;
   }
 
-  .parks-list{
-    max-width: 100%;
-    margin: 10rem;
-  }
+
+
+  

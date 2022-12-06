@@ -1,14 +1,15 @@
 
 
 .Park{
-    width: 50rem;
-    background-color: #D9D9D9;
+  width: 50rem;
+    /* background-color: #D9D9D9; */
+    background-color: white;
     border-radius: 3rem; 
-    padding: 2rem;
-    margin: 2rem;
+   
+    
   }
   .park-info-container{
-      margin-left: 1rem;
+    margin-left: 1rem;
   }
 
   .park-image{
@@ -18,16 +19,11 @@
   }
 
   .park-title{
-font-weight: bold;
-color: white;
+
+    color: #283124;
 font-size: 1.3rem;
-margin-bottom: .25rem;
-  }
-
-  .park-adress{
-margin-bottom: .25rem;
-  }
-
-  .park-description{
 
   }
+
+  
+

@@ -1,67 +1,37 @@
-import React, { useState } from "react"
-import Park from "../Park/Park"
+// import React, { useState } from "react"
+// import Park from "../Park/Park"
+// import MainTitle from '../MainTitle/MainTitle'
+import Header from '../Header/Header'
 import "./MainForm.css"
-import Axios from "axios"
+// import Axios from "axios"
 
-const MainForm = () => {
-  const [mainInputValue, setMainInputValue] = useState("")
-  const [stateCode, setStateCode] = useState([])
-
-  const handleMainInputChange = (e) => {
-    const newValue = e.target.value
-    setMainInputValue(newValue)
-  }
-
-  const getPark = (e) => {
-    Axios.get(
-      `https://developer.nps.gov/api/v1/parks?api_key=FcBVNSTUhHmVDsktfx7MkAgtGyTTnEqpCxMfaU8M&stateCode=${mainInputValue}`
-    ).then((response) => {
-      console.log(response.data)
-      setStateCode((prevValue) => {
-        return [...prevValue, response.data]
-      })
-    })
-    e.preventDefault()
-    setMainInputValue("")
-    setStateCode([])
-  }
-
+const MainForm = (props) => {
+ 
   return (
-    <>
-      <form className="main-form flex flex-col justify-center items-center">
-        <label className="main-label mr-5 text-white">
-          Your Next Adventure
+    <div className="main-form flex flex-col justify-center items-center mt-4">
+    {/* <MainTitle /> */}
+    <Header />
+      <form className=" flex flex-col justify-center items-center">
+        <label className="main-label text-white">
+          Your Next Adventure Awaits
         </label>
 
-        <div className="form-input-and-button-container mt-10">
+        <div className="form-input-and-button-container flex flex-col items-center justify-center  md:flex-row mt-10">
           <input
-            onChange={handleMainInputChange}
+            onChange={props.changeInput}
             className="main-input rounded-full text-center"
             placeholder="Enter State Letters"
-            value={mainInputValue}
+            value={props.value}
           />
 
-          <button className="main-button rounded-full ml-5" onClick={getPark}>
+          <button className="main-button hidden rounded-full ml-5 md:block " onClick={props.onAdd}>
             Search
           </button>
         </div>
       </form>
 
-      <ul className="parks-list flex flex-wrap justify-around">
-        {Object.values(stateCode).map((x) => {
-          return x.data.map((park) => {
-            return (
-              <Park
-                key={park.id}
-                image={park.images[0].url}
-                name={park.fullName}
-                description={park.description}
-              />
-            )
-          })
-        })}
-      </ul>
-    </>
+      
+      </div>
   )
 }
 export default MainForm

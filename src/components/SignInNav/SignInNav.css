@@ -1,0 +1,13 @@
+
+
+.SignIn{
+    max-width: 25rem;
+    
+}
+
+.SignIn-item{
+    max-width: 10rem;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 1.25rem;
+    margin: 1rem;
+}
