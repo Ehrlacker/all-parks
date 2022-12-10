@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import MainForm from '../../components/MainForm/MainForm'
-
+import { atom } from 'jotai'
 
 import Park from "../../components/Park/Park"
 import Axios from "axios"
@@ -8,8 +8,11 @@ import './MainPage.css'
 
 const MainPage=()=>{
     const [stateCode, setStateCode] = useState([])
+    // @var stateCode -- maybe we can name this more specifically?
+    // i.e. [parkSearchResults, setParkSearchResults]
     const [mainInputValue, setMainInputValue] = useState("")
-  
+     
+
 
     const handleMainInputChange = (e) => {
       const newValue = e.target.value
@@ -31,8 +34,6 @@ const MainPage=()=>{
         e.preventDefault()
         setStateCode([])
       }
-
-
 
     return( 
     <> 
@@ -71,6 +72,7 @@ value={mainInputValue}
 )
 }
 
-export default MainPage
+export default MainPage;
+export const userAtom = atom('');
 
 
